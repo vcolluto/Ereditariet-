@@ -5,11 +5,15 @@ public class Veicolo {
 	private String marca, modello, targa;
 	private int velocità, nrRuote, velocitàMassima;
 	
-	
-	
+	public Veicolo() {			//costruttore senza parametri (implicito)
+		marca="non definita";
+		modello="non definita";
+		velocità=0;
+		//ecc.
+	}
 	
 	public Veicolo(String marca, String modello, String targa, int nrRuote, int velocitàMassima) {
-		super();
+		super();	//chiamata al costruttore della classe Object (classe predefinita di Java, la "superclasse" di tutte le altre classi) 
 		this.marca = marca;
 		this.modello = modello;
 		this.targa = targa;
@@ -74,7 +78,8 @@ public class Veicolo {
 	}
 
 	public void setVelocitàMassima(int velocitàMassima) {
-		this.velocitàMassima = velocitàMassima;
+		if (this.velocitàMassima>0)
+			this.velocitàMassima = velocitàMassima;
 	}
 	
 	
