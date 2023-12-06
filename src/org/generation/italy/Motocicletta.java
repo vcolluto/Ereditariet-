@@ -2,9 +2,11 @@ package org.generation.italy;
 
 public class Motocicletta extends Veicolo{
 
-	public Motocicletta() {
-		super("Honda", "CRX", "asAS", 2, 200);
+	public Motocicletta(String marca, String modello, String targa,  int velocitàMassima) {
+		super(marca, modello, targa, 2, velocitàMassima); //chiamata al costruttore con nrRuote=2
 		// TODO Auto-generated constructor stub
 	}
+
+	
     
 }

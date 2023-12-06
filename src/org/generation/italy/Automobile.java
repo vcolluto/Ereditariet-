@@ -6,9 +6,9 @@ public class Automobile extends Veicolo{
 
 	
 	
-	public Automobile(String marca, String modello, String targa, int nrRuote, int velocitàMassima,
+	public Automobile(String marca, String modello, String targa,  int velocitàMassima,
 			int capienzaBagagliaio) {
-		super(marca, modello, targa, nrRuote, velocitàMassima); //chiamata al costruttore della superclasse (veicolo)
+		super(marca, modello, targa, 4, velocitàMassima); //chiamata al costruttore della superclasse (veicolo) con nrRuote=4
 		this.capienzaBagagliaio = capienzaBagagliaio;
 		
 	}
