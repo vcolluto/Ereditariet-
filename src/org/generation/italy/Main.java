@@ -1,7 +1,14 @@
 package org.generation.italy;
 
+/**
+ * classe principale
+ */
 public class Main {
 
+	/**
+	 * @param args 
+	 * 		parametri riga di comando
+	 */
 	public static void main(String[] args) {
 		//Object<-Veicolo<-Automobile<-SUV
 		//Object<-Veicolo<-Motocicletta
@@ -9,8 +16,7 @@ public class Main {
 		
 		Veicolo v=new Veicolo("Fiat","Topo","DS4321",3,50);	//chiamata al costruttore (situazione iniziale)
 		Automobile a=new Automobile("Ford","Focus","EF42433",200,500);
-		Motocicletta m=new Motocicletta("Honda", "CRX", "FE3232",220);		
-		
+		Motocicletta m=new Motocicletta("Honda", "CRX", "FE3232",220);					
 		
 		
 		v.setVelocitàMassima(40);   //modifico un attributo di un oggetto già esistente
@@ -32,7 +38,7 @@ public class Main {
 		System.out.println("Marca: "+m.getMarca());
 		System.out.println("Modello: "+m.getModello());		
 		System.out.println("Nr ruote: "+m.getNrRuote());
-		
+	
 
 	}
 

@@ -2,7 +2,7 @@ package org.generation.italy;
 
 //sottoclasse
 /**
- * 
+ * rappresenta un'automobile
  */
 public class Automobile extends Veicolo{
 	private int capienzaBagagliaio;		//specifica di Automobile
@@ -10,11 +10,16 @@ public class Automobile extends Veicolo{
 	
 	
 	/**
-	 * @param marca	: la marca dell'automobile
-	 * @param modello: il modello
+	 * @param marca 
+	 * 		la marca dell'automobile
+	 * @param modello 
+	 * 		il modello dell'automobile
 	 * @param targa
+	 * 		la targa dell'automobile
 	 * @param velocitàMassima
+	 * 		la velocità massima
 	 * @param capienzaBagagliaio
+	 * 		la capienza del bagagliaio
 	 */
 	public Automobile(String marca, String modello, String targa,  int velocitàMassima,
 			int capienzaBagagliaio) {
@@ -33,6 +38,12 @@ public class Automobile extends Veicolo{
 		return capienzaBagagliaio;
 	}
 
+	/**
+	 * imposta la capienza del bagagliaio 
+	 * 
+	 * @param capienzaBagagliaio
+	 * 		la capienza da impostare
+	 */
 	public void setCapienzaBagagliaio(int capienzaBagagliaio) {
 		this.capienzaBagagliaio = capienzaBagagliaio;
 	}

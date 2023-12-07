@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.generation.italy","l":"Automobile"},{"p":"org.generation.italy","l":"Main"},{"p":"org.generation.italy","l":"Motocicletta"},{"p":"org.generation.italy","l":"SUV"},{"p":"org.generation.italy","l":"Veicolo"}];updateSearchResults();

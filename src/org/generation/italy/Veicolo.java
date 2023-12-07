@@ -1,6 +1,9 @@
 package org.generation.italy;
 
 //superclasse
+/**
+ * rappresenta un veicolo generico
+ */
 public class Veicolo {
 	private String marca, modello, targa;
 	private int velocità, nrRuote, velocitàMassima;
@@ -23,6 +26,9 @@ public class Veicolo {
 		this.velocità=0;
 	}
 
+	/**
+	 * accelera di un km/h
+	 */
 	void accelera() {
 		if (velocità<velocitàMassima)
 			velocità++;
@@ -53,6 +59,12 @@ public class Veicolo {
 		return targa;
 	}
 
+	/**
+	 * Imposta la targa del veicolo
+	 * 
+	 * @param targa
+	 * 		la targa da impostare
+	 */
 	public void setTarga(String targa) {
 		this.targa = targa;
 	}
