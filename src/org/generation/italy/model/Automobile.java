@@ -1,4 +1,4 @@
-package org.generation.italy;
+package org.generation.italy.model;
 
 //sottoclasse
 /**
@@ -21,6 +21,9 @@ public class Automobile extends Veicolo{
 	 * @param capienzaBagagliaio
 	 * 		la capienza del bagagliaio
 	 */
+	
+	//il costruttore della sottoclasse riceve anche i parametri per gli attributi ereditati
+	//inizializza gli attributi ereditati (comuni)+gli attributi specifici di automobile
 	public Automobile(String marca, String modello, String targa,  int velocitàMassima,
 			int capienzaBagagliaio) {
 		super(marca, modello, targa, 4, velocitàMassima); //chiamata al costruttore della superclasse (veicolo) con nrRuote=4
@@ -48,6 +51,10 @@ public class Automobile extends Veicolo{
 		this.capienzaBagagliaio = capienzaBagagliaio;
 	}
 	
+	public void azionaTurbo() {
+		if (velocità<velocitàMassima-10)
+			velocità+=10;
+	}
 	
 	
 	

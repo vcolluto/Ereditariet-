@@ -1,4 +1,4 @@
-package org.generation.italy;
+package org.generation.italy.model;
 
 public class SUV extends Automobile {
 	

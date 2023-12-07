@@ -1,5 +1,9 @@
 package org.generation.italy;
 
+import org.generation.italy.model.Automobile;
+import org.generation.italy.model.Motocicletta;
+import org.generation.italy.model.Veicolo;
+
 /**
  * classe principale
  */
@@ -39,7 +43,12 @@ public class Main {
 		System.out.println("Modello: "+m.getModello());		
 		System.out.println("Nr ruote: "+m.getNrRuote());
 	
-
+		a.accelera();
+		a.decelera();
+			
+		System.out.println(a.getVelocità());
+	
+		
 	}
 
 }

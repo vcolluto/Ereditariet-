@@ -1,4 +1,4 @@
-package org.generation.italy;
+package org.generation.italy.model;
 
 //superclasse
 /**
@@ -6,15 +6,18 @@ package org.generation.italy;
  */
 public class Veicolo {
 	private String marca, modello, targa;
-	private int velocità, nrRuote, velocitàMassima;
+	private int nrRuote;
+	protected int velocità, velocitàMassima;		//gli attributi protected sono visibili nella classe in cui sono dichiarati e in tutte le sottoclassi
 	
 	public Veicolo() {			//costruttore senza parametri (implicito)
 		marca="non definita";
 		modello="non definita";
+		targa="non definita";
 		velocità=0;
 		//ecc.
 	}
 	
+	//inizializza gli attributi comuni
 	public Veicolo(String marca, String modello, String targa, int nrRuote, int velocitàMassima) {
 		super();	//chiamata al costruttore della classe Object (classe predefinita di Java, la "superclasse" di tutte le altre classi) 
 		this.marca = marca;
@@ -29,12 +32,12 @@ public class Veicolo {
 	/**
 	 * accelera di un km/h
 	 */
-	void accelera() {
+	public void accelera() {
 		if (velocità<velocitàMassima)
 			velocità++;
 	}
 	
-	void decelera() {
+	public void decelera() {
 		if (velocità>0)
 			velocità--;
 	}
@@ -69,14 +72,11 @@ public class Veicolo {
 		this.targa = targa;
 	}
 
+	//la velocità è in sola lettura (ho il getter ma non il setter)
 	public int getVelocità() {
 		return velocità;
 	}
-
-	public void setVelocità(int velocità) {
-		this.velocità = velocità;
-	}
-
+	
 	public int getNrRuote() {
 		return nrRuote;
 	}
