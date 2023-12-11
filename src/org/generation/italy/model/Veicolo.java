@@ -32,6 +32,7 @@ public class Veicolo {
 	/**
 	 * accelera di un km/h
 	 */
+	//prima versione di accelera
 	public void accelera() {
 		if (velocità<velocitàMassima)
 			velocità++;
@@ -40,6 +41,26 @@ public class Veicolo {
 	public void decelera() {
 		if (velocità>0)
 			velocità--;
+	}
+	
+	public void accelera(int quantità) {		//altra versione di accelera. Stesso nome, comportamento diverso (polimorfismo). Questo modo di utilizzare il polimorfismo viene detto "Overloading"
+		if (velocità<velocitàMassima-quantità)
+			velocità=velocità+quantità;
+	}
+		
+
+	public void accelera(String quanto) {	  //altra versione di accelera. Stesso nome, comportamento diverso (polimorfismo). In particolare: "Overloading"
+		switch (quanto) {
+		case "poco": 
+			velocità=velocità+1;
+			break;
+		case "abbastanza": 
+			velocità=velocità+5;
+			break;
+		case "molto": 
+			velocità=velocità+10;
+			break;
+		}
 	}
 
 	public String getMarca() {
