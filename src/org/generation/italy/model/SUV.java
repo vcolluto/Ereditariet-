@@ -20,5 +20,15 @@ public class SUV extends Automobile {
 		this.gancioTraino="x";
 	}
 
-	String gancioTraino;
+	private String gancioTraino;
+
+	public String getGancioTraino() {
+		return gancioTraino;
+	}
+
+	public void setGancioTraino(String gancioTraino) {
+		this.gancioTraino = gancioTraino;
+	}
+	
+	
 }

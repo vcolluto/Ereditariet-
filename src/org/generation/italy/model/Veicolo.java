@@ -24,7 +24,7 @@ public class Veicolo {
 		this.modello = modello;
 		this.targa = targa;
 		this.nrRuote = nrRuote;
-		if (this.velocitàMassima>0)
+		if (velocitàMassima>0)
 			this.velocitàMassima = velocitàMassima;
 		this.velocità=0;
 	}
@@ -115,5 +115,9 @@ public class Veicolo {
 			this.velocitàMassima = velocitàMassima;
 	}
 	
+	public String getDettagli() {		//generica descrizione del veicolo
+		return "Sono un generico veicolo di targa " + targa;
+	}
 	
-}
+	
+ }	

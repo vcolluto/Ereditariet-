@@ -7,6 +7,14 @@ public class Motocicletta extends Veicolo{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String getDettagli() {		
+		return "Sono una motocicletta di targa " + getTarga()+ " e ho 2 ruote";
+	}
+
+	
+
+	
 	
     
 }

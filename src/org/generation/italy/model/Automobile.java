@@ -56,7 +56,22 @@ public class Automobile extends Veicolo{
 			velocità+=10;
 	}
 	
+	public void accelera(int quantità, String unitàMisura) {		//overloading sulla sottoclasse
+		if (unitàMisura.equals("kmh"))
+			velocità+=quantità;
+		else if (unitàMisura.equals("mph"))
+			velocità+=quantità*1.6;
+	}
 	
+	@Override
+	public void accelera() {		//versione di accelera() senza parametri - specifico di Automobile
+		velocità+=2;
+	}
+	
+	@Override
+	public String getDettagli() {		//descrizione del veicolo specifica di automobile
+		return "Sono un'automobile di targa " + getTarga();
+	}
 	
 	
 	

@@ -1,6 +1,9 @@
 package org.generation.italy;
 
 import java.util.ArrayList;
+import java.util.Random;
+
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 import org.generation.italy.model.Automobile;
 import org.generation.italy.model.Motocicletta;
@@ -30,6 +33,8 @@ public class Main {
 		
 		Veicolo v1;		//dichiaro un veicolo
 		v1= new Automobile("Opel", "Vectra", "AB43234", 190, 200);	//assegno al veicolo un'automobile
+	
+		
 		
 		((Automobile) v1).azionaTurbo();   //per poter chiamare un metodo della sottoclasse bisogna "convertire il veicolo in automobile" (Casting)
 		
@@ -48,12 +53,30 @@ public class Main {
 		System.out.println("ELENCO VEICOLI");
 		for(Veicolo veicolo:elencoVeicoli)	//scorro tutti i veicoli dell'elenco
 		{
+			
 			//la variabile "veicolo" di volta in volta assumerà la forma di un'automobile, di una motocicletta, di un SUV, ...  (polimorfismo)
+			if (veicolo instanceof SUV)
+			{
+				System.out.println("SUV: ");
+				System.out.println(
+						"Gancio: "+
+						((SUV) veicolo).getGancioTraino());
+ 			} else if (veicolo instanceof Automobile )		//veicolo è un'istanza di Automobile?
+			{
+				System.out.println("Automobile: ");
+				System.out.println(
+						"Capienza bagagliaio: "+
+						((Automobile)veicolo).getCapienzaBagagliaio());
+			} else if (veicolo instanceof Motocicletta)			
+				System.out.println("Motocicletta: ");
+			else  
+				System.out.println("Veicolo: ");
 			
 			System.out.println(
-					"Targa: "+veicolo.getTarga()+
-					" Marca: "+veicolo.getMarca()+
-					" Modello: "+veicolo.getModello());
+				"Targa: "+veicolo.getTarga()+
+				" Marca: "+veicolo.getMarca()+
+				" Modello: "+veicolo.getModello());
+			System.out.println("\n");
 		}
 			
 		
@@ -81,11 +104,29 @@ public class Main {
 		a.accelera();		//Accelera di 1	(primo metodo)
 		a.accelera(10);		//Accelera di 10 (secondo metodo)
 		a.accelera("abbastanza");	//accelera di 5 (terzo metodo)
+		a.accelera(5, "mph");  //accelera di 5 mph
 		a.decelera();
 				
-		System.out.println(a.getVelocità());
-	
+		//m.accelera(5, "mph");	//sulla motocicletta non è definita questa versione di accelera
 		
+		
+		System.out.println("\n"+a.getDettagli());  //descrizione SPECIFICA di automobile
+		System.out.println("Velocità automobile PRIMA di accelerare: " + a.getVelocità());
+		a.accelera();
+		System.out.println("Velocità automobile DOPO di accelerare: " + a.getVelocità());
+		
+		
+		System.out.println("\n"+m.getDettagli());  //descrizione SPECIFICA di motocicletta
+		System.out.println("Velocità motocicletta PRIMA di accelerare: " + m.getVelocità());
+		m.accelera();
+		System.out.println("Velocità motocicletta DOPO di accelerare: " + m.getVelocità());
+		
+		
+		System.out.println("\n"+v.getDettagli());  //descrizione GENERICA di veicolo
+		
+		
+		
+		System.out.println("Il mio oggetto veicolo è: "+v.toString());
 	}
 
 }
